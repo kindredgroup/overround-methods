@@ -11,14 +11,14 @@ double initEstimate = Power.GetInitEstimate(idealOverround, fairPrices.Length);
 double initStep = -0.01;
 double errorThreshold = 1e-6;
 int maxIterations = 100;
-double k = Solver.Solve(initEstimate, initStep, errorThreshold, maxIterations, estimate =>
+Solution k = Solver.Solve(initEstimate, initStep, errorThreshold, maxIterations, estimate =>
 {
     double[] odds = Power.Apply(fairPrices, estimate);
     double overround = Booksum.Compute(odds);
     return Math.Pow(overround - idealOverround, 2);
 });
-double[] odds = Power.Apply(fairPrices, k);
-Console.WriteLine("k estimate for fair prices [{0}], overround {1} is {2}", string.Join(", ", fairPrices), idealOverround, k);
+double[] odds = Power.Apply(fairPrices, k.Value);
+Console.WriteLine("k estimate for fair prices {0}, overround {1} is {2}", ArrayToString(fairPrices), idealOverround, k);
 Console.WriteLine("odds are: {0}", ArrayToString(odds));
 
 static string ArrayToString(double[] array)
