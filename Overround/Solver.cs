@@ -11,7 +11,7 @@ public class Solution(double value, double error, int iterations)
     public override string ToString()
     {
         return String.Format("{{value: {0}, error: {1}, iterations: {2}}}", Value, Error, Iterations);
-    }  
+    }
 }
 
 public class Solver
@@ -19,7 +19,7 @@ public class Solver
     public static Solution Solve(double initEstimate, double initStep, double errorThreshold, int maxIterations, Func<double, double> lossFunc)
     {
         double lastError = lossFunc(initEstimate);
-        if (lastError < errorThreshold) 
+        if (lastError < errorThreshold)
         {
             return new Solution(initEstimate, errorThreshold, 1);
         }
@@ -27,7 +27,8 @@ public class Solver
         double lastEstimate = initEstimate;
         double step = initStep;
         int iteration = 1;
-        while (true) {
+        while (true)
+        {
             double estimate = lastEstimate + step;
             double error = lossFunc(estimate);
             if (error < errorThreshold)
@@ -39,7 +40,7 @@ public class Solver
                 step = -step / 2;
             }
 
-            if (iteration > maxIterations)
+            if (iteration >= maxIterations)
             {
                 return new Solution(estimate, error, iteration);
             }
