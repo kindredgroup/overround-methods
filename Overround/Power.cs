@@ -26,13 +26,12 @@ public class Power : IOverroundMethod
         double fairBooksum = Booksum.FromPrices(fairPrices);
         double targetBooksum = idealOverround * fairBooksum;
         double initEstimate = GetInitEstimate(idealOverround, fairPrices.Length);
-        Solution k = Solver.Solve(initEstimate, InitStep, ErrorThreshold, MaxIterations, estimate =>
+        Solution solution = Solver.Solve(initEstimate, InitStep, ErrorThreshold, MaxIterations, estimate =>
         {
             double[] odds = ComputeOdds(fairPrices, estimate);
             double booksum = Booksum.FromPrices(odds);
             return Math.Pow(booksum - targetBooksum, 2);
         });
-        Console.WriteLine("k is {0}", k);
-        return ComputeOdds(fairPrices, k.Value);
+        return ComputeOdds(fairPrices, solution.Value);
     }
 }
