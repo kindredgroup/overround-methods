@@ -1,8 +1,8 @@
 `overround-methods`
 ===
-[![Build Status](https://img.shields.io/github/actions/workflow/status/kindredgroup/overround-methods/master.yml?branch=master&style=flat-square&logo=github)](https://github.com/kindredgroup/overround-methods/actions/workflows/dotnet.yml)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/kindredgroup/overround-methods/dotnet.yml?branch=master&style=flat-square&logo=github)](https://github.com/kindredgroup/overround-methods/actions/workflows/dotnet.yml)
 
-A collection of overround application methods.
+A collection of overround application methods: Multiplicative, Additive, Power and Odds-Ratio.
 
 # Examples
 ```csharp
