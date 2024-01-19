@@ -6,12 +6,12 @@ public class Power : IOverroundMethod
     private const double ErrorThreshold = 1e-6;
     private const int MaxIterations = 100;
 
-    static double GetInitEstimate(double overround, int numOutcomes)
+    private static double GetInitEstimate(double overround, int numOutcomes)
     {
         return 1 + Math.Log(1 / overround) / Math.Log(numOutcomes);
     }
 
-    static double[] ComputeOdds(double[] fairPrices, double k)
+    private static double[] ComputeOdds(double[] fairPrices, double k)
     {
         double[] odds = new double[fairPrices.Length];
         for (int i = 0; i < fairPrices.Length; i++)

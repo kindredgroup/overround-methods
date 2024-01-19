@@ -6,7 +6,7 @@ public class OddsRatio : IOverroundMethod
     private const double ErrorThreshold = 1e-6;
     private const int MaxIterations = 100;
 
-    static double[] ComputeOdds(double[] fairPrices, double g)
+    private static double[] ComputeOdds(double[] fairPrices, double g)
     {
         double[] odds = new double[fairPrices.Length];
         for (int i = 0; i < fairPrices.Length; i++)

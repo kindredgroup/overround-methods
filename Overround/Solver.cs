@@ -21,12 +21,12 @@ public class Solver
         double lastError = lossFunc(initEstimate);
         if (lastError < errorThreshold)
         {
-            return new Solution(initEstimate, errorThreshold, 1);
+            return new Solution(initEstimate, lastError, 1);
         }
 
         double lastEstimate = initEstimate;
         double step = initStep;
-        int iteration = 1;
+        int iteration = 2;
         while (true)
         {
             double estimate = lastEstimate + step;

@@ -1,6 +1,6 @@
 ﻿using Overround;
 
-double[] fairPrices = [1 / 0.1, 1 / 0.2, 1 / 0.3, 1 / 0.4];
+double[] fairPrices = [1 / 0.01, 1 / 0.29, 1 / 0.3, 1 / 0.4];
 double fairBooksum = Booksum.FromPrices(fairPrices);
 Console.WriteLine("fair prices:     [{0}]", string.Join(", ", fairPrices));
 Console.WriteLine("fair booksum:    {0}", fairBooksum);
