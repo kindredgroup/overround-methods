@@ -39,6 +39,6 @@ public class SolverTest
         var solution = Solver.Solve(4, 0.01, Delta, 10, est => Math.Pow(est - 5, 2));
         Assert.AreEqual(4.09, solution.Value, Delta);
         Assert.AreEqual(10, solution.Iterations);
-        Assert.AreEqual(0.8281, solution.Error, Delta); // (5-4.49)^2
+        Assert.AreEqual(0.8281, solution.Error, Delta); // (5-4.09)^2
     }
 }
