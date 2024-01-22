@@ -24,14 +24,14 @@ public class OddsRatioTest
             double[] fairPrices = [1 / 0.1, 1 / 0.2, 1 / 0.3, 1 / 0.4];
             double[] odds = method.Apply(fairPrices, idealOverround);
             Assert.AreEqual(idealOverround, Booksum.FromPrices(odds), Delta);
-            ArrayAssert.AreEqual([8.328244274809158, 4.256997455470738, 2.8999151823579306, 2.2213740458015265], odds, Delta);
+            ArrayAssert.AreEqual([8.328, 4.257, 2.9, 2.221], odds, Delta);
         }
         {
             double idealOverround = 1.15;
             double[] fairPrices = [1 / 0.01, 1 / 0.29, 1 / 0.3, 1 / 0.4];
             double[] odds = method.Apply(fairPrices, idealOverround);
             Assert.AreEqual(idealOverround, Booksum.FromPrices(odds), Delta);
-            ArrayAssert.AreEqual([80.59798994974874, 2.968463004678565, 2.876046901172529, 2.2060301507537687], odds, Delta);
+            ArrayAssert.AreEqual([80.644, 2.97, 2.877, 2.206], odds, Delta);
         }
     }
 

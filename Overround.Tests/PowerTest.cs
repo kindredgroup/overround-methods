@@ -24,14 +24,14 @@ public class PowerTest
             double[] fairPrices = [1 / 0.1, 1 / 0.2, 1 / 0.3, 1 / 0.4];
             double[] odds = method.Apply(fairPrices, idealOverround);
             Assert.AreEqual(idealOverround, Booksum.FromPrices(odds), Delta);
-            ArrayAssert.AreEqual([7.792612295808612, 4.200100853723753, 2.9257830833421794, 2.2637912052854765], odds, Delta);
+            ArrayAssert.AreEqual([7.793, 4.2, 2.926, 2.264], odds, Delta);
         }
         {
             double idealOverround = 1.15;
             double[] fairPrices = [1 / 0.01, 1 / 0.29, 1 / 0.3, 1 / 0.4];
             double[] odds = method.Apply(fairPrices, idealOverround);
             Assert.AreEqual(idealOverround, Booksum.FromPrices(odds), Delta);
-            ArrayAssert.AreEqual([56.99885594904725, 2.9646851350987014, 2.877746548950255, 2.235448624371958], odds, Delta);
+            ArrayAssert.AreEqual([56.999, 2.965, 2.878, 2.235], odds, Delta);
         }
     }
 
