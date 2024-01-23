@@ -14,6 +14,7 @@ public class OddsRatioTest
         double[] fairPrices = [1 / 0.1, 1 / 0.2, 1 / 0.3, 1 / 0.4];
         double[] odds = method.Apply(fairPrices, idealOverround);
         Assert.AreEqual(idealOverround, Booksum.FromPrices(odds), Delta);
+        ArrayAssert.AreEqual([1 / 0.1, 1 / 0.2, 1 / 0.3, 1 / 0.4], odds, Delta);
     }
 
     [TestMethod]
@@ -42,5 +43,6 @@ public class OddsRatioTest
         double[] fairPrices = [1 / 0.2, 1 / 0.4, 1 / 0.6, 1 / 0.8];
         double[] odds = method.Apply(fairPrices, idealOverround);
         Assert.AreEqual(idealOverround * 2, Booksum.FromPrices(odds), Delta);
+        ArrayAssert.AreEqual([3.744, 2.029, 1.457, 1.171], odds, Delta);
     }
 }
