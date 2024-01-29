@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overround", "Overround\Overround.csproj", "{DEF254B1-9AB7-40EF-97E3-1181C6965539}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overrounds", "Overrounds\Overrounds.csproj", "{DEF254B1-9AB7-40EF-97E3-1181C6965539}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{5CC997ED-8A82-4551-8774-B595037D217F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overround.Tests", "Overround.Tests\Overround.Tests.csproj", "{7AF1A5D1-9FB0-4398-AFA8-3C0139D9BA5E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overrounds.Tests", "Overrounds.Tests\Overrounds.Tests.csproj", "{7AF1A5D1-9FB0-4398-AFA8-3C0139D9BA5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

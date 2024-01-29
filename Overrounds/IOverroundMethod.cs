@@ -1,4 +1,4 @@
-namespace Overround;
+namespace Overrounds;
 
 public interface IOverroundMethod
 {

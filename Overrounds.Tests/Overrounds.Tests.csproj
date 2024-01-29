@@ -9,6 +9,7 @@
     <IsTestProject>true</IsTestProject>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+    <RootNamespace>Overround.Tests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Overround\Overround.csproj" />
+    <ProjectReference Include="..\Overrounds\Overrounds.csproj" />
   </ItemGroup>
 
 </Project>

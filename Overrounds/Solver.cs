@@ -1,4 +1,4 @@
-namespace Overround;
+namespace Overrounds;
 
 public class Solution(double value, double error, int iterations)
 {
@@ -14,7 +14,7 @@ public class Solution(double value, double error, int iterations)
     }
 }
 
-public class Solver
+public static class Solver
 {
     public static Solution Solve(double initEstimate, double initStep, double errorThreshold, int maxIterations, Func<double, double> lossFunc)
     {

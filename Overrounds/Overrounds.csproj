@@ -5,6 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+    <RootNamespace>Overround</RootNamespace>
   </PropertyGroup>
 
 </Project>

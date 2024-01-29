@@ -1,4 +1,4 @@
-﻿using Overround;
+﻿using Overrounds;
 
 double[] fairPrices = [1 / 0.01, 1 / 0.29, 1 / 0.3, 1 / 0.4];
 double fairBooksum = Booksum.FromPrices(fairPrices);

@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Overround\Overround.csproj" />
+    <ProjectReference Include="..\Overrounds\Overrounds.csproj" />
   </ItemGroup>
 
 </Project>

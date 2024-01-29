@@ -6,7 +6,7 @@ A collection of overround application methods: _Multiplicative_, _Additive_, _Po
 
 # Examples
 ```csharp
-using Overround;
+using Overrounds;
 
 double[] fairPrices = [1 / 0.1, 1 / 0.2, 1 / 0.3, 1 / 0.4];
 double fairBooksum = Booksum.FromPrices(fairPrices);

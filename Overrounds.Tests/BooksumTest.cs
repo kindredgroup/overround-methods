@@ -1,4 +1,4 @@
-namespace Overround.Tests;
+namespace Overrounds.Tests;
 
 [TestClass]
 public class BooksumTest

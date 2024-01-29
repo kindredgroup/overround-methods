@@ -1,22 +1,22 @@
-namespace Overround;
+namespace Overrounds;
 
-public class Power : IOverroundMethod
+public class OddsRatio : IOverroundMethod
 {
-    private const double InitStep = -0.01;
+    private const double InitStep = 0.01;
     private const double ErrorThreshold = 1e-6;
     private const int MaxIterations = 100;
 
     private static double GetInitEstimate(double fairBooksum, double idealBooksum, int numOutcomes)
     {
-        return Math.Log(idealBooksum / numOutcomes) / Math.Log(fairBooksum / numOutcomes);
+        return (numOutcomes / fairBooksum - 1) / (numOutcomes / idealBooksum - 1);
     }
 
-    private static double[] ComputeOdds(double[] fairPrices, double k)
+    private static double[] ComputeOdds(double[] fairPrices, double g)
     {
         double[] odds = new double[fairPrices.Length];
         for (int i = 0; i < fairPrices.Length; i++)
         {
-            odds[i] = Math.Pow(fairPrices[i], k);
+            odds[i] = (fairPrices[i] - 1) / g + 1;
         }
         return odds;
     }

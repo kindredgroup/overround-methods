@@ -1,6 +1,6 @@
-namespace Overround.Tests;
+namespace Overrounds.Tests;
 
-class ArrayAssert
+static class ArrayAssert
 {
     internal static void AreEqual(double[] expected, double[] actual, double delta)
     {
