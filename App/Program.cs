@@ -9,7 +9,7 @@ double idealOverround = 1.15;
 Console.WriteLine("ideal overround: {0}", idealOverround);
 Console.WriteLine("ideal booksum:   {0}", idealOverround * fairBooksum);
 
-IOverroundMethod[] methods = [new Multiplicative(), new Additive(), new Power(), new OddsRatio()];
+IOverroundMethod[] methods = [new Multiplicative(), new Additive(), new Power(), new OddsRatio(), new Shin()];
 foreach (var method in methods)
 {
     double[] odds = method.Apply(fairPrices, idealOverround);
